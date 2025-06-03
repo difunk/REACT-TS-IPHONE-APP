@@ -9,9 +9,16 @@ import {
   yellowImg,
 } from "../utils";
 
-export const navLists = ["Store", "Mac", "iPhone", "Support"];
+export const navLists: readonly string[] = ["Store", "Mac", "iPhone", "Support"];
 
-export const hightlightsSlides = [
+interface HighlightSlide {
+  id: number;
+  textLists: string[];
+  video: string;
+  videoDuration: number;
+}
+
+export const hightlightsSlides: HighlightSlide[] = [
   {
     id: 1,
     textLists: [
@@ -46,7 +53,14 @@ export const hightlightsSlides = [
   },
 ];
 
-export const models = [
+interface Model {
+  id: number;
+  title: string;
+  color: string[];
+  img: string;
+}
+
+export const models: Model[] = [
   {
     id: 1,
     title: "iPhone 15 Pro in Natural Titanium",
@@ -73,12 +87,17 @@ export const models = [
   },
 ];
 
-export const sizes = [
+interface Size {
+  label: string;
+  value: string;
+}
+
+export const sizes: Size[] = [
   { label: '6.1"', value: "small" },
   { label: '6.7"', value: "large" },
 ];
 
-export const footerLinks = [
+export const footerLinks: readonly string[] = [
   "Privacy Policy",
   "Terms of Use",
   "Sales Policy",
